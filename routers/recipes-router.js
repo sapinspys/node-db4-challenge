@@ -4,10 +4,20 @@ const recipesModel = require('../models/recipes-model');
 
 const router = express.Router();
 
-function validateRecipeID (req, res, next) {
+async function validateRecipeID(req, res, next) {
   const { id } = req.params
 
-  recipesModel.getRecipes
+  try {
+    const recipe = await recipesModel.getRecipeByID(id);
+
+    if(recipe.length) {
+      next()
+    } else {
+      res.status(404).json({ error: 'Could not find a recipe with the given ID.'})
+    }
+  } catch (error) {
+    res.status(500).json(error)
+  }
 }
 
 router.get('/', async (req, res) => {
@@ -19,7 +29,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/:id/shoppingList', async (req, res) => {
+router.get('/:id/shoppingList', validateRecipeID, async (req, res) => {
   const { id } = req.params;
 
   try {
@@ -30,7 +40,7 @@ router.get('/:id/shoppingList', async (req, res) => {
   }
 })
 
-router.get('/:id/instructions', async (req, res) => {
+router.get('/:id/instructions', validateRecipeID, async (req, res) => {
   const { id } = req.params;
  
   try {

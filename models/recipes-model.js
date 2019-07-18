@@ -22,7 +22,7 @@ function getRecipeByID(id) {
 
 function getShoppingList(recipe_id) {
   return db("recipe_ingredients")
-    .innerJoin("ingredients", "recipe_ingredients.ingredients_id", "ingredients.id")
+    .innerJoin("ingredients", "recipe_ingredients.ingredient_id", "ingredients.id")
     .where({ recipe_id })
     .select('name', 'quantity');
 }
