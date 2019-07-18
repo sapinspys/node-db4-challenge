@@ -4,6 +4,12 @@ const recipesModel = require('../models/recipes-model');
 
 const router = express.Router();
 
+function validateRecipeID (req, res, next) {
+  const { id } = req.params
+
+  recipesModel.getRecipes
+}
+
 router.get('/', async (req, res) => {
   try {
     const recipes = await recipesModel.getRecipes()

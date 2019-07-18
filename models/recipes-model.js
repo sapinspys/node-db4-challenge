@@ -6,12 +6,18 @@ const db = require("../data/dbConfig.js");
 
 module.exports = {
   getRecipes,
+  getRecipeByID,
   getShoppingList,
   getInstructions
 };
 
 function getRecipes() {
   return db("recipes");
+}
+
+function getRecipeByID(id) {
+  return db("recipes")
+    .where({ id })
 }
 
 function getShoppingList(recipe_id) {
