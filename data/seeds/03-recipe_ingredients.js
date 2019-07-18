@@ -10,8 +10,8 @@ exports.seed = function(knex) {
     { id: 8, recipe_id: 2, ingredient_id: 8, quantity: 400 },
     { id: 9, recipe_id: 3, ingredient_id: 1, quantity: 2 },
     { id: 10, recipe_id: 3, ingredient_id: 5, quantity: 0.5 },
-    { id: 10, recipe_id: 3, ingredient_id: 6, quantity: 0.5 },
-    { id: 11, recipe_id: 3, ingredient_id: 4, quantity: 6 },
-    { id: 12, recipe_id: 3, ingredient_id: 8, quantity: 400 },
+    { id: 11, recipe_id: 3, ingredient_id: 6, quantity: 0.5 },
+    { id: 12, recipe_id: 3, ingredient_id: 4, quantity: 6 },
+    { id: 13, recipe_id: 3, ingredient_id: 8, quantity: 400 },
   ]);
 };
