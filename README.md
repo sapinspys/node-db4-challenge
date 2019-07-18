@@ -18,8 +18,9 @@
 7. `knex migrate:make create_cookbook_tables`
 8. Populate migration file based on your data model
 9. `knex seed:make XX-seed_name` for cleanup and all tables
-10. Populate seed files
-11.
+10. Set up knex-cleaner in cleanup seed file
+11. Populate remaining seed files
+12. `knex migrate:latest`
 
 ## Assignment
 

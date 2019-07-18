@@ -3,7 +3,7 @@ exports.up = function(knex) {
     .createTable("recipes", tbl => {
       tbl.increments();
       tbl.text("name", 128).notNullable();
-      tbl.text("created_by", 128).notNullable();
+      tbl.text("created_by", 255).notNullable();
     })
 
     .createTable("ingredients", tbl => {
@@ -20,7 +20,7 @@ exports.up = function(knex) {
         .references("id")
         .inTable("recipes")
         .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .onDelete("RESTRICT");
       tbl
         .integer("ingredient_id")
         .unsigned()
@@ -28,7 +28,7 @@ exports.up = function(knex) {
         .references("id")
         .inTable("ingredients")
         .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .onDelete("RESTRICT");
       tbl
         .float("quantity")
         .unsigned()
@@ -44,7 +44,7 @@ exports.up = function(knex) {
         .references("id")
         .inTable("recipes")
         .onUpdate("CASCADE")
-        .onDelete("CASCADE");
+        .onDelete("RESTRICT");
       tbl
         .integer("step_number")
         .unsigned()

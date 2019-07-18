@@ -1,13 +1,25 @@
-
 exports.seed = function(knex) {
-  // Deletes ALL existing entries
-  return knex('table_name').del()
-    .then(function () {
-      // Inserts seed entries
-      return knex('table_name').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
-      ]);
-    });
+  return knex("recipes").insert([
+    { id: 1, recipe_id: 1, step_number: 1, instructions: 'Create your pizza crust with dough'  },
+    { id: 2, recipe_id: 1, step_number: 2, instructions: 'Spread sauce(s) on pizza crust' },
+    { id: 3, recipe_id: 1, step_number: 3, instructions: 'Pre-heat oven to 400 Degrees Fahrenheit' },
+    { id: 4, recipe_id: 1, step_number: 4, instructions: 'Add 3/4 of all of your cheese' },
+    { id: 5, recipe_id: 1, step_number: 5, instructions: 'Add your toppings' },
+    { id: 6, recipe_id: 1, step_number: 6, instructions: 'Add remaining cheese' },
+    { id: 7, recipe_id: 1, step_number: 7, instructions: 'Cook in oven for about 15 minutes' },
+    { id: 1, recipe_id: 2, step_number: 1, instructions: 'Create your pizza crust with dough'  },
+    { id: 2, recipe_id: 2, step_number: 2, instructions: 'Spread sauce(s) on pizza crust' },
+    { id: 3, recipe_id: 2, step_number: 3, instructions: 'Pre-heat oven to 400 Degrees Fahrenheit' },
+    { id: 4, recipe_id: 2, step_number: 4, instructions: 'Add 3/4 of all of your cheese' },
+    { id: 5, recipe_id: 2, step_number: 5, instructions: 'Add your toppings' },
+    { id: 6, recipe_id: 2, step_number: 6, instructions: 'Add remaining cheese' },
+    { id: 7, recipe_id: 2, step_number: 7, instructions: 'Cook in oven for about 15 minutes' },
+    { id: 1, recipe_id: 3, step_number: 1, instructions: 'Create your pizza crust with dough'  },
+    { id: 2, recipe_id: 3, step_number: 2, instructions: 'Spread sauce(s) on pizza crust' },
+    { id: 3, recipe_id: 3, step_number: 3, instructions: 'Pre-heat oven to 400 Degrees Fahrenheit' },
+    { id: 4, recipe_id: 3, step_number: 4, instructions: 'Add 3/4 of all of your cheese' },
+    { id: 5, recipe_id: 3, step_number: 5, instructions: 'Add your toppings' },
+    { id: 6, recipe_id: 3, step_number: 6, instructions: 'Add remaining cheese' },
+    { id: 7, recipe_id: 3, step_number: 7, instructions: 'Cook in oven for about 15 minutes' },
+  ]);
 };
