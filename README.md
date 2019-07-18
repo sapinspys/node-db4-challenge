@@ -12,11 +12,14 @@
 1. Design data model using dbdesigner
 2. `npm init` and fill in
 3. Install nodemon as devDependency
-4. Install knex, sqlite3, express, helmet dependencies
+4. Install knex, knex-cleaner, sqlite3, express, helmet dependencies
 5. `knex init` to create knexfile.js
 6. Configure knexfile to handle nulls, foreign keys, and directories
 7. `knex migrate:make create_cookbook_tables`
 8. Populate migration file based on your data model
+9. `knex seed:make XX-seed_name` for cleanup and all tables
+10. Populate seed files
+11.
 
 ## Assignment
 
