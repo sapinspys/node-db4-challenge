@@ -1,13 +1,7 @@
-const express = require('express');
+const server = require('./server.js');
 
-const recipesRouter = require('./routers/recipes-model.js');
+const PORT = process.env.PORT || 5000;
 
-const server = express();
-
-server.use(express.json());
-
-server.get('/', (req, res) =>)
-
-server.use('/api/schemes', SchemeRouter);
-
-module.exports = server;
+server.listen(PORT, () => {
+  console.log(`\n** Listening on http://localhost:${PORT}/ **\n`);
+});
