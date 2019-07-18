@@ -11,7 +11,11 @@
 
 1. Design data model using dbdesigner
 2. `npm init` and fill in
-3.
+3. Install nodemon as devDependency
+4. Install knex, sqlite3, express, helmet dependencies
+5. `knex init` to create knexfile.js
+6. Configure knexfile to handle nulls, foreign keys, and directories
+7. 
 
 ## Assignment
 
