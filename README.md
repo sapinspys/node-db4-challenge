@@ -15,7 +15,8 @@
 4. Install knex, sqlite3, express, helmet dependencies
 5. `knex init` to create knexfile.js
 6. Configure knexfile to handle nulls, foreign keys, and directories
-7. 
+7. `knex migrate:make create_cookbook_tables`
+8. Populate migration file based on your data model
 
 ## Assignment
 
