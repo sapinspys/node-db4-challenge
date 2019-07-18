@@ -15,9 +15,10 @@ function getRecipes() {
 }
 
 function getShoppingList(recipe_id) {
-  return db("recipes")
-    .innerJoin("ingredients", "recipes.id", "=", "ingredients.recipe_id")
-    .where({ recipe_id });
+  return db("recipe_ingredients")
+    .innerJoin("ingredients", "recipe_ingredients.ingredients_id", "ingredients.id")
+    .where({ recipe_id })
+    .select('name', 'quantity');
 }
 
 function getInstructions(recipe_id) {
