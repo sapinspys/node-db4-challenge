@@ -21,6 +21,8 @@
 10. Set up knex-cleaner in cleanup seed file
 11. Populate remaining seed files
 12. `knex migrate:latest`
+13. `npx knex seed:run`
+14. Create models directory and recipes-model.js
 
 ## Assignment
 
